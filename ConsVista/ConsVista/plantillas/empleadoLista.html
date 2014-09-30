@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Mi lista{% endblock %}
+
+{% block contenido %}
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+{% for item in empleados %}
+    <p>{{ item.documento }}  {{ item.nombre }} {{ item.fecha_nacimiento }} {{ item.sueldo }} {{ item.Sexo }}</p>
+{% endfor %}
+{% endblock %}

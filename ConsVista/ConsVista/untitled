@@ -1,0 +1,10 @@
+empleadoLista
+{% extends "base.html" %}
+
+{% block title %}Mi lista{% endblock %}
+
+{% block contentenido %}
+{% for item in empleados %}
+    <h2>{{ item.documento }}  {{ item.nombre }} {{ item.fecha_nacimiento }} {{ item.sueldo }} {{ item.Sexo }}</h2>
+{% endfor %}
+{% endblock %}
