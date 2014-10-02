@@ -3,6 +3,8 @@ from datetime import datetime
 from django import forms
 from django.contrib.admin import widgets 
 from django.forms.extras.widgets import SelectDateWidget
+from Aplicacion.models import *
+
 
 TOPIC_CHOICES = (
     ('F', 'Femenino'),
@@ -17,3 +19,7 @@ class ContactoForm(forms.Form):
 	Sexo = forms.ChoiceField(choices =TOPIC_CHOICES)
 	#correo = forms.EmailField(label='Tu correo electrónico')
 	#mensaje = forms.CharField(widget=forms.Textarea)
+
+class EmpleadoModelForm(forms.ModelForm):
+	class Meta:
+		model = Empleado
