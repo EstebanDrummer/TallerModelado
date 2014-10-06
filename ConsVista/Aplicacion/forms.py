@@ -21,5 +21,6 @@ class ContactoForm(forms.Form):
 	#mensaje = forms.CharField(widget=forms.Textarea)
 
 class EmpleadoModelForm(forms.ModelForm):
+	fecha_nacimiento = forms.DateField(widget=SelectDateWidget(years=range(1910, datetime.now().year)))
 	class Meta:
 		model = Empleado
